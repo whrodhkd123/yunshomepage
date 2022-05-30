@@ -6,22 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내온겜</title>
 </head>
+<style>
+    ul li{
+        display: inline-block;
+        color: black;
+        width: 200px;
+        height: 70px;
+        font-size: 30px;
+        padding: 3px;
+        border: solid 3px;
+        float: right;
+        text-align: center;
+        background-color: gray;
+    }
+    li:hover{
+        cursor: pointer;
+        color: yellowgreen;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: yellowgreen;
+    }
+    h3{
+        display: inline;
+        font-size: 40px;
+        padding: 40px;
+        background-color: yellowgreen ;
+        margin: 30px;
+    }
+    .gum{
+        text-align: left;
+        float: left;
+        list-style: none;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px pink;
+    }
+    .gum:hover{
+        color: red;
+    }
+    h2{
+        border: 2px solid;
+        display: inline;
+        background-color: pink;
+    }
+    ol a:hover{
+        color: red;
+    }
+    body{
+        background-color: papayawhip;
+    }
+    @keyframes recolor{
+        0%{color: red;}
+        25%{color: orange;}
+        50%{color: green;}
+        75%{color: blue}
+        100%{color: violet}
+    }
+    h3 span{
+        animation-name: recolor;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    .yout{
+        list-style: none;
+    }
+    p{
+        font-size: 20px;
+        text-shadow: 2px 2px 2px skyblue;
+    }
+</style>
 <body>
-    <h1>내가하는온라인게임</h1><h1><a href="https://lostark.game.onstove.com"><img src="imgge/lostark.jpg"width="250"height="250"></a><a href="https://www.leagueoflegends.com"<img src="imgge/lol.jpg"width="250"height="250"></h1>
-    <h3>반갑습니다 내온겜 입니다</h3>
-    <h3>내가하는 게임 위주로 올려요</h3><br>
-
-    <table>
-        <caption>관련커뮤니티</caption>
-        <thead>로스트아크인벤</thead>
-        <tr><td>롤인벤</td></tr>
-    </table><br>
-    <h3>추천유튜버영상</h3>
-    <ol type="A">
-        <li><h3><iframe width="460" height="315" src="https://www.youtube.com/embed/Nzpsf1VMbgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3></li>
-        <li><h3><iframe width="460" height="315" src="https://www.youtube.com/embed/HerkoxnVlaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3></li>
-    </ol>
-
-
+    <h3><span>내가하는온라인게임</span></h3>
+    <ul>
+        <li><a href="#">개발자코멘트</a></li>
+        <li><a href="#">건의사항</a></li>
+    </ul><br><br><br><br><br><br>
+    <p>안녕하세요 ? 제가 하는 게임 위주로 만든 정보페이지 입니다.</p>
+    <br><br><br><br><br><br>
+    <div>
+        <h2>게임 관련 뉴스</h2>
+        <ol>
+            <li class="gum"><a href="https://www.thisisgame.com/webzine/news/nboard/4/?n=149337">로스트아크 금강선 디렉터 은퇴</a></li><br><br>
+            <li class="gum"><a href="https://www.gamemeca.com/view.php?gid=1680840">이번 MSI SKT1 RNG에 패배 결승에서 떨어져</a></li><br><br>
+            <li class="gum"><a href="https://lostark.game.onstove.com/Promotion/DressRoom/220525">로스트아크 신규 네리아 상점 업데이트</a></li><br><br>
+        </ol>
+    </div>
+    <div>
+        <br><br><br><br>
+        <h2 style="background-color: red; color: white;">추천 유튜버</h2>
+        <ol class="yout">
+            <li>s</li>
+            <li>s</li>
+            <li>s</li>
+            <li>s</li>
+        </ol>
+    </div>
 </body>
 </html>
