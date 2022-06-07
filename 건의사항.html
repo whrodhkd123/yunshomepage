@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내온겜</title>
+</head>
+<style>
+        @keyframes color{
+        0%{color: red;}
+        25%{color: orange;}
+        50%{color: green;}
+        75%{color: blue}
+        100%{color: violet}
+        }
+        span{
+            animation-name: color;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            font-size: 30px;
+        }
+        body{
+            background-color: papayawhip;
+        }
+        textarea{
+            background-color: papayawhip;
+            display:inline
+        }
+        p{
+            font-size: 25px;
+        }
+        div{
+            text-align: right;
+            display: 
+        }
+</style>
+<body>
+    <h2><span>내온겜 건의사항</span></h2>
+    <hr>
+    <form action="건의사항진행.html">
+    <p>안녕하세요 ? 궁금하거나 건의할 내용이 있다면 글 남겨주시면
+        검토 후 내용을 추가 하겠습니다.
+    </p>
+    유저 이름 : <input type="text"placeholder="닉네임"name="이름"><br>
+    <fieldset style="width: 350px; height: 350px;">
+        <legend>건의사항</legend>
+        <textarea cols="50" rows="20"></textarea>
+    </fieldset><br>
+    <input type="submit" value="전송"> <input type="reset" value="다시쓰기">
+</form>
+<img src="imgge/머쓱코코.png" alt="">
+</body>
+</html>
