@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="quiz"> </div>
+    <button id="submit" style="border:1px solid tomato; margin:2px; border-radius:5px; color:tomato;"> Submit </button>
+<div id="result"> </div>
+
+<script>
+
+//Model
+const quizData = [
+    {
+        question : '로스트아크 금강선 디렉터가 입은 탈의 이름은 ? ',
+        answers : {
+           a : "모코모코",
+           b : "이고바바",
+           c : "비아키스"
+        },
+       correct : 'b'
+    },
+    {
+        question : '리그오브레전드 시즌 2 승리의 스킨 이름은 ? ',
+        answers : {
+            a : '승리의 엘리스',
+            b : '승리의 모르가나',
+            c : '승리의 잔나'
+        },
+       correct : 'c'
+    },
+    {
+          question : '로스트아크 암살자 4번째 직업 이름은 무엇인가 ?',
+          answers : {
+                a : '소울이터',
+                b : '슬레이어',
+                c : '실리안'
+          },
+       correct : 'a'
+    }
+]
+
+const quizDisplay = document.getElementById('quiz');
+const submitBtn = document.getElementById('submit');
+const resultDisplay = document.getElementById('result');
+
+function buildQuiz(){
+     const output = [ ]; 
+      quizData.forEach(  
+          (currentQuestion, questionNum) => { 
+                      const answers = [ ];     
+                      for(item in currentQuestion.answers){  
+                                  answers.push(`<label>
+                                               <input type="radio" name="question${questionNum}" value="${item}">
+                                                   ${item} : ${currentQuestion.answers[item]}
+                                               </label>`);
+                         }
+                            output.push(`<div class="question"> ${currentQuestion.question}</div>
+                                         <div class="answer">${answers.join('')}</div>`);
+                   }              
+      );
+         quizDisplay.innerHTML = output.join('</br>');
+   }
+   
+function showResult(){
+        const answerDisplays = quizDisplay.querySelectorAll('.answer');  
+          let numCorrect = 0; 
+
+           quizData.forEach( (currentQuestion, questionNum)=>{
+                  const answerDisplay = answerDisplays[questionNum]; 
+                  const selector = `input[name=question${questionNum}]:checked`;  
+                  const userAnswer = (answerDisplay.querySelector(selector) || {}).value;  
+
+
+                   if(userAnswer === currentQuestion.correct){    
+                           numCorrect++;
+                           answerDisplays[questionNum].style.color = 'lightgreen';
+                   }else{
+                           answerDisplays[questionNum].style.color = 'red';
+                   }
+           });
+             resultDisplay.innerHTML = `${numCorrect} out of ${quizData.length}`; 
+   }
+
+   buildQuiz(); 
+   submitBtn.addEventListener('click',showResult);   
+
+</script> 
+<img src="imgge/mokoko.jpg" alt=""width="800"height="500"><br>
+</body>
+</html>
